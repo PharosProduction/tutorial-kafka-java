@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SbtSettings">
+    <option name="sbtLauncherJarPath" value="/usr/local/Cellar/sbt/1.2.8/libexec/bin/sbt-launch.jar" />
+    <option name="sbtLauncherVmParameters" value="-Xmx512M -XX:MaxPermSize=256M" />
+    <option name="useApplicationSettings" value="false" />
+  </component>
+</project>
