@@ -44,7 +44,7 @@ public class AssignSeekConsumer {
     KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
 
     setupConsumer(consumer, offset, partitionNum);
-    fetchProps(consumer, numOfMessages);
+    fetchMessages(consumer, numOfMessages);
   }
 
   // Private
@@ -55,8 +55,7 @@ public class AssignSeekConsumer {
     consumer.seek(partition, offset);
   }
 
-  private void fetchProps(KafkaConsumer<String, String> consumer, int numOfMessages) {
-    int numberOfMessages = numOfMessages;
+  private void fetchMessages(KafkaConsumer<String, String> consumer, int numOfMessages) {
     int numberOfMessagesRead = 0;
     boolean keepOnReading = true;
 
@@ -69,7 +68,7 @@ public class AssignSeekConsumer {
         mLogger.info("Key: " + record.key() + ", Value: " + record.value());
         mLogger.info("Partition: " + record.partition() +  ", Offset: " + record.offset());
 
-        if (numberOfMessagesRead >= numberOfMessages) {
+        if (numberOfMessagesRead >= numOfMessages) {
           keepOnReading = false;
           break;
         }
